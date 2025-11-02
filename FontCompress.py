@@ -70,7 +70,7 @@ def collect_chars_from_directory(directory: str | Path) -> Set[str]:
                 if ext == '.html':
                     all_chars.update(extract_chars_from_html(file_path))
                     file_count += 1
-                elif ext in ('.js', '.jsx', '.ts', '.tsx'):
+                elif ext in ('.js', '.jsx', '.ts', '.tsx', '.json'):
                     all_chars.update(extract_chars_from_js(file_path))
                     file_count += 1
             except Exception as e:
